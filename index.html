@@ -26,7 +26,6 @@
             padding: 0 20px;
         }
         
-        /* Header */
         header {
             background: rgba(255, 255, 255, 0.95);
             -webkit-backdrop-filter: blur(10px);
@@ -72,7 +71,6 @@
             color: #e74c3c;
         }
         
-        /* Hero Section */
         .hero {
             padding: 8rem 0 4rem;
             text-align: center;
@@ -129,7 +127,6 @@
             box-shadow: 0 12px 35px rgba(231, 76, 60, 0.6);
         }
         
-        /* Services Grid */
         .services {
             padding: 6rem 0;
             background: white;
@@ -184,9 +181,9 @@
             object-fit: cover;
             border-radius: 15px;
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #e0e0e0, #f0f0f0);
-            position: relative;
             overflow: hidden;
+            position: relative;
+            background: #f0f0f0;
         }
         
         .service-image img {
@@ -194,6 +191,12 @@
             height: 100%;
             object-fit: cover;
             border-radius: 15px;
+            transition: transform 0.5s ease;
+            display: block;
+        }
+        
+        .service-card:hover .service-image img {
+            transform: scale(1.05);
         }
         
         .service-image .image-placeholder {
@@ -203,8 +206,8 @@
             width: 100%;
             height: 100%;
             font-size: 3rem;
-            color: #666;
-            background: linear-gradient(135deg, #e0e0e0, #f0f0f0);
+            color: #999;
+            background: linear-gradient(135deg, #e8e8e8, #f5f5f5);
         }
         
         .service-card h3 {
@@ -240,7 +243,6 @@
             margin-top: 1rem;
         }
         
-        /* Stats Section */
         .stats {
             background: linear-gradient(135deg, #2c3e50 0%, #e74c3c 100%);
             color: white;
@@ -264,7 +266,6 @@
             opacity: 0.9;
         }
         
-        /* Contact Section */
         .contact {
             background: #f8f9ff;
             padding: 6rem 0;
@@ -368,7 +369,6 @@
             font-size: 1.5rem;
         }
         
-        /* Footer */
         footer {
             background: #2c3e50;
             color: white;
@@ -376,7 +376,6 @@
             padding: 2rem 0;
         }
         
-        /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -388,7 +387,6 @@
             }
         }
         
-        /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -442,7 +440,7 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="https://github.com/melsetionsi-cell/my-garage/blob/ab8c9bc44d54682163a5856e2fff2c9618797e30/Images/engine%20diagnostics.jpg" alt="Engine Diagnostics" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'image-placeholder\'>🔧 Engine Diagnostics</div>'">
+                        <img src="images/engine-diagnostics.jpg" alt="Engine Diagnostics">
                     </div>
                     <h3>Engine Diagnostics & Repair</h3>
                     <p>Comprehensive engine diagnostics, tune-ups, and repair services to keep your vehicle running smoothly.</p>
@@ -456,7 +454,7 @@
 
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="images/brake-service.jpg" alt="Brake Service" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'image-placeholder\'>🛞 Brake Service</div>'">
+                        <img src="images/brake-service.jpg" alt="Brake Service">
                     </div>
                     <h3>Brake Services</h3>
                     <p>Complete brake inspection, pad replacement, rotor resurfacing, and hydraulic system repairs.</p>
@@ -471,7 +469,7 @@
 
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="images/oil-change.jpg" alt="Oil Change" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'image-placeholder\'>🛢️ Oil Change</div>'">
+                        <img src="images/oil-change.jpg" alt="Oil Change Service">
                     </div>
                     <h3>Oil Change & Fluid Services</h3>
                     <p>Professional oil changes, fluid flushes, and maintenance services to extend your engine's life.</p>
@@ -485,7 +483,7 @@
 
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="images/vehicle-inspection.jpg" alt="Vehicle Inspection" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'image-placeholder\'>🔍 Vehicle Inspection</div>'">
+                        <img src="images/vehicle-inspection.jpg" alt="Vehicle Inspection">
                     </div>
                     <h3>Vehicle Inspection</h3>
                     <p>Comprehensive vehicle inspections and safety checks to ensure your car is road-worthy.</p>
@@ -499,7 +497,7 @@
 
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="images/electrical-systems.jpg" alt="Electrical Systems" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'image-placeholder\'>⚡ Electrical Systems</div>'">
+                        <img src="images/electrical-systems.jpg" alt="Electrical Systems Repair">
                     </div>
                     <h3>Electrical Systems</h3>
                     <p>Battery testing, alternator repair, starter replacement, and complete electrical system diagnostics.</p>
@@ -514,7 +512,7 @@
 
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="images/suspension.jpg" alt="Suspension & Steering" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'image-placeholder\'>🔄 Suspension</div>'">
+                        <img src="images/suspension.jpg" alt="Suspension and Steering Repair">
                     </div>
                     <h3>Suspension & Steering</h3>
                     <p>Shock absorber replacement, strut repair, alignment services, and complete suspension overhaul.</p>
@@ -637,7 +635,6 @@
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -651,14 +648,12 @@
             });
         });
 
-        // Form submission
         document.getElementById('serviceForm').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Thank you for your service request! We will contact you within 2 hours to confirm your appointment.');
             this.reset();
         });
 
-        // Counter animation for stats
         function animateCounters() {
             const counters = document.querySelectorAll('.stat-item h3');
             const speed = 200;
@@ -680,7 +675,6 @@
             });
         }
 
-        // Trigger counter animation when stats section is visible
         const statsSection = document.querySelector('.stats');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -692,7 +686,6 @@
         });
         observer.observe(statsSection);
 
-        // Add scroll effect to header
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
