@@ -111,7 +111,7 @@ The contact section contains a service request form collecting:
 - Requested service
 - Vehicle details and reported issues
 
-The form currently operates entirely on the client side. On submission, it displays a confirmation message and resets the form.
+
 
 ## Contact Information
 
